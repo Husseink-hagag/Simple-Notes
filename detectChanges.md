@@ -38,5 +38,35 @@ const v2 = { b: { name: "car", price: 13, info: { sku: 123, tag: ["trend", "top"
 const changes = detectChanges(v1, v2);
 console.log(changes);  // Output: { a: 1, c: 2, b: 3 }
 ```
+# importtant !
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+    
+    
+        console.log(JSON.stringify({a:1,b:2,}) == JSON.stringify({a:1,b:2})); // true
+        console.log(JSON.stringify({b:2,a:1}) == JSON.stringify({a:1,b:2})); // false
+    
+    
+        // Assign Lodash to a variable named `lodash`
+        const lodash = _;
 
+        // Now use lodash.isEqual
+        const object1 = { 'a': 1, 'b': {a1:5,b1:5} };
+        const object2 = { 'a': 1, 'b': {b1:5,a1:5}};
+        
+        console.log(lodash.isEqual(object1, object2)); // true
+    </script>
+</body>
+</html>
+
+```
 
