@@ -38,7 +38,7 @@ const v2 = { b: { name: "car", price: 13, info: { sku: 123, tag: ["trend", "top"
 const changes = detectChanges(v1, v2);
 console.log(changes);  // Output: { a: 1, c: 2, b: 3 }
 ```
-# importtant !
+# Note 
 ```html
 <!DOCTYPE html>
 <html lang="en">
