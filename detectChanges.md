@@ -2,6 +2,9 @@
 
 ##
 ```javascript
+// 1 -> removed
+// 2 -> added
+// 3 -> modified
 const v1 = { 
   a: { name: "tea", price: 20 }, 
   b: { name: "car", price: 13, info: { sku: 123, tag: ["trend"] } } 
@@ -23,7 +26,7 @@ function compareObjects(obj1, obj2) {
       if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
         const nestedChanges = compareObjects(obj1[key], obj2[key]);
         if (Object.keys(nestedChanges).length > 0) {
-          changes[key] = nestedChanges; // Recursively add modified nested objects
+          changes[key] = nestedChanges; //  add nested modifications
         }
       } else if (JSON.stringify(obj1[key]) !== JSON.stringify(obj2[key])) {
         changes[key] = 3; // Mark as modified
